@@ -3922,7 +3922,7 @@ class StockAnalysisPipeline:
         
         per_stock_timeout = max(
             0,
-            int(getattr(self.config, "per_stock_timeout_seconds", 300) or 0),
+            int(getattr(self.config, "per_stock_timeout_seconds", 600) or 0),
         )
         # 单股推送模式（#55）：从配置读取
         single_stock_notify = getattr(self.config, 'single_stock_notify', False)
